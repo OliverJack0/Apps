@@ -20,16 +20,11 @@ const KeyboardAvoidingComponent = () => {
         <View style={styles.inner}>
           <Text style={styles.header}>Curriculo</Text>
           <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="Nome" style={styles.textInput} />
-         
+          <TextInput placeholder="Objetivos" style={styles.textInput} />
+          <TextInput placeholder="Formação" style={styles.textInput} />
+          <TextInput placeholder="Cursos" style={styles.textInput} />
+          <TextInput placeholder="Idiomas" style={styles.textInput} />
+          <TextInput placeholder="Experiências" style={styles.textInput} />         
           <View style={styles.btnContainer}>
             <Button title="Salvar" onPress={() => null} />
           </View>
