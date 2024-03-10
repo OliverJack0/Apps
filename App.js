@@ -8,7 +8,7 @@ export default function App() {
       <View>
         <Key />
       </View>
-      <Text> 0la </Text>
+      <Text> 0la teste  </Text>
     </ScrollView>
 
   );
