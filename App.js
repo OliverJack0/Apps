@@ -5,10 +5,12 @@ import Scroll from './SRC/components/ScrollView'
 export default function App() {
   return (
     <ScrollView>
-    <View>
-     <Key/>
-    </View>
+      <View>
+        <Key />
+      </View>
+      <Text>Ola Meu amor</Text>
     </ScrollView>
+
 
   );
 
