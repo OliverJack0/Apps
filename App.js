@@ -5,10 +5,9 @@ import Scroll from './SRC/components/ScrollView'
 export default function App() {
   return (
     <ScrollView>
-      <View>
-        <Key />
-      </View>
-      <Text> nova 6 </Text>
+    <View>
+     <Key/>
+    </View>
     </ScrollView>
 
   );
