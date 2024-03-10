@@ -5,13 +5,14 @@ import Scroll from './SRC/components/ScrollView'
 export default function App() {
   return (
     <ScrollView>
-    <View>
-     <Key/>
-    </View>
+      <View>
+        <Key />
+      </View>
+      <Text> 0la </Text>
     </ScrollView>
-    
+
   );
-  
+
 }
 
 const styles = StyleSheet.create({
