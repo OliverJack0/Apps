@@ -13,22 +13,16 @@ import {
 
 const KeyboardAvoidingComponent = () => {
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.inner}>
           <Text style={styles.header}>Curriculo</Text>
-          <TextInput placeholder="Nome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
-          <TextInput placeholder="SobreNome" style={styles.textInput} />
+          <TextInput placeholder="Nome" style={styles.textInput} keyboardType='default'/>
+          <TextInput placeholder="Objetivos" style={styles.textInput} keyboardType='default'/>
+          <TextInput placeholder="Formação" style={styles.textInput}keyboardType='default'/>
+          <TextInput placeholder="Cursos" style={styles.textInput} keyboardType='default'/>
+          <TextInput placeholder="Idiomas" style={styles.textInput} keyboardType='default'/>
+          <TextInput placeholder="Experiências" style={styles.textInput} keyboardType='default'/>
           <View style={styles.btnContainer}>
             <Button title="Salvar" onPress={() => null} />
           </View>
@@ -50,6 +44,8 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 36,
     marginBottom: 48,
+    marginTop: 25
+
   },
   textInput: {
     height: 40,
