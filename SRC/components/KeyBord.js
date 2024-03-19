@@ -43,8 +43,8 @@ const KeyboardAvoidingComponent = () => {
       body {
           font-family: Arial, sans-serif;
           text-align: center;
-          padding-top: 25%;
-          padding-bottom: 20%; 
+          padding-top: 15%;
+          padding-bottom: 10%; 
       }
 
       .container {
@@ -155,7 +155,7 @@ const KeyboardAvoidingComponent = () => {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.inner}>
             <Text style={styles.header}>Insira seus dados:</Text>
-            <TextInput placeholder="Nome" style={styles.textInput} keyboardType='default' value={nome} onChangeText={setNome} />
+            <TextInput placeholder="Nome" style={styles.textInput} keyboardType='default' value={nome}+- onChangeText={setNome} />
             <TextInput placeholder="Objetivos" style={styles.textInput} keyboardType='default' value={objetivo} onChangeText={setObjetivo} />
             <TextInput placeholder="Habilidades e Competências" style={styles.textInput} keyboardType='default' value={habilidades} onChangeText={setHabilidades} multiline />
             <TextInput placeholder="Formação" style={styles.textInput} keyboardType='default' value={formacao} onChangeText={setFormacao} />
