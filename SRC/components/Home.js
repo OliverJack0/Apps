@@ -5,7 +5,7 @@ import {View, Text, StyleSheet, Button} from 'react-native';
 export default function TelaHome(props){
     
     return(
-        <View>
+        <View style={styles.container}>
             <View style={styles.curriculos}>
                 <Text style={styles.header}>Selecione um currículo</Text>
             </View>
@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 25,
         marginBottom: 48,
-        marginTop: 30,
         fontWeight: 'bold'
     },
     curriculos: {

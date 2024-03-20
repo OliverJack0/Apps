@@ -15,7 +15,7 @@ import {
 import { printToFileAsync } from 'expo-print';
 import { shareAsync } from 'expo-sharing';
 
-const KeyboardAvoidingComponent = () => {
+const KeyboardAvoidingComponent = (props) => {
   const [nome, setNome] = useState("");
   const [objetivo, setObjetivo] = useState("");
   const [habilidades, setHabilidades] = useState("");
@@ -79,14 +79,14 @@ const KeyboardAvoidingComponent = () => {
           <div class="container">
               <h1 id="nome">${nome}</h1>
               <hr>
-              <h2>Objetivo:</h2>
+              <h2>Objetivo</h2>
               <p>${objetivo}
               </p>
               <hr>
               `
               +
               `
-              <h2>Habilidades e Competências:</h2>
+              <h2>Habilidades e Competências</h2>
               <ul>
                   <li>${Linhas(habilidades, 0)}</li>
                   `+ `
@@ -97,7 +97,7 @@ const KeyboardAvoidingComponent = () => {
               `
               +
               `
-              <h2>Formação:</h2>
+              <h2>Formação</h2>
               <ul>
                   <li>${formacao}</li>
               </ul>
@@ -105,7 +105,7 @@ const KeyboardAvoidingComponent = () => {
               `
               +
                `
-              <h2>Cursos:</h2>
+              <h2>Cursos</h2>
               <ul>
                   <li>${cursos}</li>
                   `+ `
@@ -117,7 +117,7 @@ const KeyboardAvoidingComponent = () => {
               `
               +
               `
-              <h2>Idiomas:</h2>
+              <h2>Idiomas</h2>
               <ul>
                   <li>${idiomas}</li>
                   `+ `
@@ -128,7 +128,7 @@ const KeyboardAvoidingComponent = () => {
               `
               +
               `
-              <h2>Experiências:</h2>
+              <h2>Experiências</h2>
               <ul>
                   <li>${experiencia}</li>
                   `+ `
@@ -138,8 +138,6 @@ const KeyboardAvoidingComponent = () => {
               </div>
               </body>
   </html>`;
-
-  //const fs = require(fs);
 
   async function generatePdf() {
     const file = await printToFileAsync({
@@ -163,7 +161,15 @@ const KeyboardAvoidingComponent = () => {
             <TextInput placeholder="Idiomas" style={styles.textInput} keyboardType='default' value={idiomas} onChangeText={setIdiomas} multiline />
             <TextInput placeholder="Experiências" style={styles.textInput} keyboardType='default' value={experiencia} onChangeText={setExperiencia} multiline />
             <View style={styles.btnContainer}>
-              <Button title="Salvar" onPress={generatePdf} />
+              <Button title="Salvar" onPress={() => props.navigation.navigate('TelaPreview', {
+                nome: nome,
+                objetivo: objetivo,
+                habilidades: habilidades,
+                formacao: formacao,
+                cursos: cursos,
+                idiomas: idiomas,
+                experiencia: experiencia
+              })}/>
             </View>
           </View>
         </TouchableWithoutFeedback>
