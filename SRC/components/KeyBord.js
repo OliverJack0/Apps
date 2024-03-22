@@ -23,12 +23,6 @@ const KeyboardAvoidingComponent = (props) => {
   const [idiomas, setIdiomas] = useState("");
   const [experiencia, setExperiencia] = useState("");
 
-  
-
-  
-
-  
-
   return (
     <ScrollView>
       <KeyboardAvoidingView style={styles.container}>
