@@ -24,7 +24,7 @@ export default function Preview(props) {
       body {
           font-family: Arial, sans-serif;
           text-align: center;
-          padding-top: 15%;
+          padding-top: 10%;
           padding-bottom: 10%; 
       }
 
@@ -71,8 +71,11 @@ export default function Preview(props) {
               <ul>
                   <li>${Linhas(habilidades, 0)}</li>
                   `+ `
-                  ${contarLinhas(habilidades) > 1 ?
-                '<li>' + Linhas(habilidades, 1) + '</li>' + '<li>' + Linhas(habilidades, 2) + '</li>' + '<li>' + Linhas(habilidades, 3) + '</li>' + '<li>' + Linhas(habilidades, 4) + '</li>' + '<li>' + Linhas(habilidades, 5) + '</li>' : ""}
+                  ${contarLinhas(habilidades) == 2 ?
+                '<li>' + Linhas(habilidades, 1) + '</li>' : contarLinhas(habilidades) == 3 ?
+                '<li>' + Linhas(habilidades, 1) + '</li>' + '<li>' + Linhas(habilidades, 2) + '</li>': contarLinhas(habilidades) == 4 ?
+                '<li>' + Linhas(habilidades, 1) + '</li>' + '<li>' + Linhas(habilidades, 2) + '</li>' + '<li>' + Linhas(habilidades, 3) + '</li>': contarLinhas(habilidades) == 5 ?
+                '<li>' + Linhas(habilidades, 1) + '</li>' + '<li>' + Linhas(habilidades, 2) + '</li>' + '<li>' + Linhas(habilidades, 3) + '</li>' + Linhas(habilidades, 4) + '</li>': ''}
               </ul>
               <hr>
               `
@@ -90,8 +93,11 @@ export default function Preview(props) {
               <ul>
                   <li>${cursos}</li>
                   `+ `
-                  ${contarLinhas(cursos) > 1 ?
-                '<li>' + Linhas(cursos, 1) + '</li>' + '<li>' + Linhas(cursos, 2) + '</li>' + '<li>' + Linhas(cursos, 3) + '</li>' + '<li>' + Linhas(cursos, 4) + '</li>' + '<li>' + Linhas(cursos, 5) + '</li>' :""}
+                  ${contarLinhas(cursos) == 2 ?
+                    '<li>' + Linhas(cursos, 1) + '</li>' : contarLinhas(cursos) == 3 ?
+                    '<li>' + Linhas(cursos, 1) + '</li>' + '<li>' + Linhas(cursos, 2) + '</li>': contarLinhas(cursos) == 4 ?
+                    '<li>' + Linhas(cursos, 1) + '</li>' + '<li>' + Linhas(cursos, 2) + '</li>' + '<li>' + Linhas(cursos, 3) + '</li>': contarLinhas(cursos) == 5 ?
+                    '<li>' + Linhas(cursos, 1) + '</li>' + '<li>' + Linhas(cursos, 2) + '</li>' + '<li>' + Linhas(cursos, 3) + '</li>' + Linhas(cursos, 4) + '</li>': ''}
               </ul>
               <hr>
               `
@@ -101,8 +107,11 @@ export default function Preview(props) {
               <ul>
                   <li>${idiomas}</li>
                   `+ `
-                  ${contarLinhas(idiomas) > 1 ?
-                + Linhas(idiomas, 4) + '</li>' + '<li>' + Linhas(idiomas, 5) + '</li>' : ""}
+                  ${contarLinhas(idiomas) == 2 ?
+                    '<li>' + Linhas(idiomas, 1) + '</li>' : contarLinhas(idiomas) == 3 ?
+                    '<li>' + Linhas(idiomas, 1) + '</li>' + '<li>' + Linhas(idiomas, 2) + '</li>': contarLinhas(idiomas) == 4 ?
+                    '<li>' + Linhas(idiomas, 1) + '</li>' + '<li>' + Linhas(idiomas, 2) + '</li>' + '<li>' + Linhas(idiomas, 3) + '</li>': contarLinhas(idiomas) == 5 ?
+                    '<li>' + Linhas(idiomas, 1) + '</li>' + '<li>' + Linhas(idiomas, 2) + '</li>' + '<li>' + Linhas(idiomas, 3) + '</li>' + Linhas(idiomas, 4) + '</li>': ''}
               </ul>
               <hr>
               `
@@ -112,8 +121,11 @@ export default function Preview(props) {
               <ul>
                   <li>${experiencia}</li>
                   `+ `
-                  ${contarLinhas(experiencia) > 1 ?
-            '<li>' + Linhas(experiencia, 1) + '</li>' + '<li>' + Linhas(experiencia, 2) + '</li>' + '<li>' + Linhas(experiencia, 3) + '</li>' + '<li>' + Linhas(experiencia, 4) + '</li>' + '<li>' + Linhas(experiencia, 5) + '</li>' : ""}
+                  ${contarLinhas(experiencia) == 2 ?
+                    '<li>' + Linhas(experiencia, 1) + '</li>' : contarLinhas(experiencia) == 3 ?
+                    '<li>' + Linhas(experiencia, 1) + '</li>' + '<li>' + Linhas(experiencia, 2) + '</li>': contarLinhas(experiencia) == 4 ?
+                    '<li>' + Linhas(experiencia, 1) + '</li>' + '<li>' + Linhas(experiencia, 2) + '</li>' + '<li>' + Linhas(experiencia, 3) + '</li>': contarLinhas(experiencia) == 5 ?
+                    '<li>' + Linhas(experiencia, 1) + '</li>' + '<li>' + Linhas(experiencia, 2) + '</li>' + '<li>' + Linhas(experiencia, 3) + '</li>' + Linhas(experiencia, 4) + '</li>': ''}
               </ul>
               </div>
               </body>
