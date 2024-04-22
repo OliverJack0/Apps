@@ -1,6 +1,7 @@
 import { StyleSheet, ScrollView, Text, Button, View } from 'react-native';
 import { printToFileAsync } from 'expo-print';
 import { shareAsync } from 'expo-sharing';
+import React from 'react';
 
 export default function Preview(props) {
     const { nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia } = props.route.params;

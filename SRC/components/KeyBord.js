@@ -45,7 +45,7 @@ const KeyboardAvoidingComponent = (props) => {
                 cursos: cursos,
                 idiomas: idiomas,
                 experiencia: experiencia
-              })}/>
+              })} />
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -56,14 +56,22 @@ const KeyboardAvoidingComponent = (props) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 30,
     flex: 1,
+    backgroundColor: '#f3edf6',
+    
   },
+  
   inner: {
+    marginTop: 0,
     padding: 24,
     flex: 1,
     justifyContent: 'space-around',
   },
   header: {
+    alignSelf: 'center',
+    color: '#230B41',
+    fontWeight: 'bold',
     fontSize: 36,
     marginBottom: 48,
     marginTop: 25
@@ -78,6 +86,15 @@ const styles = StyleSheet.create({
   },
   btnContainer: {
     marginTop: 12,
+    backgroundColor: 'white',
+    borderRadius: 30,
+    width: 300,
+    height: 40,
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginBottom: 200,
+    
+
   },
 });
 
