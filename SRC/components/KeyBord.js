@@ -5,7 +5,6 @@ import {
   TextInput,
   StyleSheet,
   Text,
-  Platform,
   TouchableWithoutFeedback,
   Button,
   Keyboard,
@@ -21,18 +20,6 @@ const KeyboardAvoidingComponent = (props) => {
     const [idiomas, setIdiomas] = useState("");
     const [experiencia, setExperiencia] = useState("");
 
-    const Navigate = () => {{
-            props.navigation.navigate('TelaPreview', {
-            nome: nome,
-            objetivo: objetivo,
-            habilidades: habilidades,
-            formacao: formacao,
-            cursos: cursos,
-            idiomas: idiomas,
-            experiencia: experiencia
-        });
-    };
-
     return (
         <ScrollView>
             <KeyboardAvoidingView style={styles.container}>
@@ -47,7 +34,15 @@ const KeyboardAvoidingComponent = (props) => {
                         <TextInput placeholder="Idiomas" style={styles.textInput} keyboardType='default' value={idiomas} onChangeText={setIdiomas} multiline />
                         <TextInput placeholder="Experiências" style={styles.textInput} keyboardType='default' value={experiencia} onChangeText={setExperiencia} multiline />
                         <View style={styles.btnContainer}>
-                            <Button title="Salvar" onPress={Navigate()} />
+                        <Button title="Salvar" onPress={() => props.navigation.navigate('TelaPreview', {
+                            nome: nome,
+                            objetivo: objetivo,
+                            habilidades: habilidades,
+                            formacao: formacao,
+                            cursos: cursos,
+                            idiomas: idiomas,
+                            experiencia: experiencia
+                        })} />
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
@@ -55,7 +50,7 @@ const KeyboardAvoidingComponent = (props) => {
         </ScrollView>
     );
 };
-}
+
 
 const styles = StyleSheet.create({
   container: {

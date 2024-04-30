@@ -12,11 +12,7 @@ import SplashScreen from './SplashScreenView';
 
 const Tab = createBottomTabNavigator();
 
-
 const Stack = createNativeStackNavigator();
-
-
-
 
 function TelaCurriculo({route, navigation}){
   return(
@@ -40,15 +36,11 @@ function TelaPreview({route ,navigation}){
 
 function TabNavigator(){
   return(
-    <Tab.Navigator 
-    initialRouteName="Home" 
-    
-    >
+    <Tab.Navigator initialRouteName="Home" >
 
     <Tab.Screen name="Home" 
     component={StackScreen} 
-    
-    
+
     options={{
       headerShown: false,
       tabBarLabel: 'Home',
@@ -76,7 +68,7 @@ function TabNavigator(){
       tabBarIcon: ({ color }) => (
         <Entypo name="plus" color={color} size={26}/>
    
-      )
+      ),
     }}
     />
    </Tab.Navigator>
@@ -93,17 +85,10 @@ function StackScreen(){
   </Stack.Navigator>
   );
 }
-
-
-
 export default function App() {
-
-  
-  return (  <NavigationContainer>
-    <TabNavigator/>   
-          
-        </NavigationContainer>
-    
+  return (
+  <NavigationContainer>
+    <TabNavigator/>
+  </NavigationContainer>
 );
-
 }

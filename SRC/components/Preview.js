@@ -2,12 +2,10 @@ import { StyleSheet, ScrollView, Text, Button, View } from 'react-native';
 import { printToFileAsync } from 'expo-print';
 import { shareAsync } from 'expo-sharing';
 import React from 'react';
-import inserirDados from './Banco/database';
 
 export default function Preview(props) {
-    //const { nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia } = props.route.params;
-    const { nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia } = ['Kennedy', 'Kennedy','Kennedy','Kennedy','Kennedy','Kennedy','Kennedy'];
-
+    const { nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia } = props.route.params;
+    
     function contarLinhas(texto) {
         let linhas = texto.split(/\r\n|\r|\n/)
         return linhas.length
@@ -134,16 +132,12 @@ export default function Preview(props) {
               </body>
     </html>`;
 
-    function salvarDados({nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia}){
-        inserirDados({nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia});
-    };
     async function generatePdf() {
         const file = await printToFileAsync({
             html: html,
             base64: false
         });
         await shareAsync(file.uri);
-        salvarDados({nome, objetivo, habilidades, formacao, cursos, idiomas, experiencia})
     }
     return (
         <ScrollView style={styles.container}>
